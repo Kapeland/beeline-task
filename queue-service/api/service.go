@@ -29,7 +29,7 @@ func (s *Service) Start(cfg *config.Config) error {
 
 	go func() {
 		if err := brokerServer.ListenAndServe(); !errors.Is(err, http.ErrServerClosed) {
-			//slog.Error("Failed running gateway server", "description", err.Error())
+			//slog.Error("Failed running broker server", "description", err.Error())
 			cancel()
 		}
 	}()
