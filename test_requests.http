@@ -1,0 +1,14 @@
+### Put some msg
+PUT http://localhost:8080/queue/1
+Content-Type: application/json
+
+{
+  "message": "msg2"
+}
+
+### Get some msg
+GET http://localhost:8080/queue/1
+
+### Put with empty body
+PUT http://localhost:8080/queue/1
+Content-Type: application/json
